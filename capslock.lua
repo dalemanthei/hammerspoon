@@ -11,16 +11,18 @@ local hyperModifiers = {'cmd','alt','shift','ctrl'}
 local hyperKey = hs.hotkey.modal.new({}, "f17")
 
 -- The following keys are configured as hot keys in their respective apps (or in Keyboard Maestro)
+-- a → Airmail 3 (configure in Airmail 3 preferences)
 -- b → Bartender 2 (configure in Bartender 2 preferences)
 -- d → Dash (configure in Dash preferences)
 -- h → HazeOver (configure in HazeOver preferences)
 -- m → Moom (configure in Moom preferences)
 -- n → Notifications configure in System preferences → Keyboard → Shortcuts → Mission Control)
 -- f → Fantastical (configure in Fantastical preferences)
+-- s → Sound output change (configure in Keyboard Maestro)
 -- t → Typinator (configure in Typinator preferences)
 -- ' → Iterm2 hotkey window (configure in Iterm2 preferences as ⌘⌥^⇧" but single quote here because hyper adds shift)
 -- SPACE → Spotlight (configure in System Preferences → Keyboard → Shortcuts → Spotlight, moved so that ⌘␣ could be used for Quicksilver)
-hyperBindings = {'b','d','h','m','n','f','t','\'','SPACE'}
+hyperBindings = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','\'','SPACE', '-', '='}
 
 for i,key in ipairs(hyperBindings) do
   hyperKey:bind({}, key, nil, function() hs.eventtap.keyStroke(hyperModifiers, key)

@@ -1,13 +1,13 @@
 
 -- reload on change, do this first so it works even if error
-hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", hs.reload):start()
+hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/*.lua", hs.reload):start()
 
 require('capslock')
 require('scansnap')
 -- require('mouse')
 
 -- rebind OmniFocus ^⌥SPACE to AppleScript to launch OmniFocus if it is not already active
-hs.hotkey.bind({'ctrl', 'alt'}, 'SPACE', function () hs.execute ('osascript /Users/manthei/Dropbox/AppleScripts/OmniFocus/OopsieFocus.scpt') end)
+-- hs.hotkey.bind({'ctrl', 'alt'}, 'SPACE', function () hs.execute ('osascript /Users/manthei/Dropbox/Dale←→Veritas/AppleScripts/OmniFocus/OopsieFocus.scpt') end)
 
 -- USB events
 
